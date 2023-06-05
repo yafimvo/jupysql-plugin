@@ -2,11 +2,10 @@ name: CI
 
 on:
   push:
+    branches:
+      - main
+      - 'dev/**'
   pull_request:
-
-defaults:
-  run:
-    shell: bash -l {0}
 
 jobs:
   test:
