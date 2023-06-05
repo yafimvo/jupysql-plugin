@@ -26,7 +26,7 @@ export class FormModel extends DOMWidgetModel {
 
     static serializers: ISerializers = {
         ...DOMWidgetModel.serializers,
-        // Add any extra serializers here
+        // Add any extra serializers here..
     };
 
     static model_name = 'FormModel';
