@@ -26,10 +26,8 @@
   "include": [
     "src/*",
     "src/keywords.json",
-    "src/widgets/table.ts",
-    "src/widgets/form.ts"
-  ],
-  "exclude": [
-    "src/widgets/connector.ts"
+    "src/_widgets/table.ts",
+    "src/_widgets/form.ts",
+    "src/_widgets/connector.ts",
   ],
 }
