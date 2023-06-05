@@ -28,5 +28,8 @@
     "src/keywords.json",
     "src/widgets/table.ts",
     "src/widgets/form.ts"
-  ]
+  ],
+  "exclude": [
+    "src/widgets/connector.ts"
+  ],
 }
