@@ -14,6 +14,15 @@ permissions:
 
 jobs:
   update-reference-screenshots:
+    strategy:
+      matrix:
+        python-version: ['3.11']
+        # setup-python doesn't have conda on windows
+        # we only have snapshots for macos, ignoring ubuntu-latest
+        os: [macos-latest]
+
+    runs-on: ${{ matrix.os }}
+
     name: Update Galata References
     if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, 'update galata references') }}
     runs-on: ubuntu-latest
