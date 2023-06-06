@@ -1,11 +1,8 @@
 name: Update Galata References
 
 on:
-  push:
-    branches:
-      - main
-      - 'dev/**'
-  pull_request:
+  issue_comment:
+    types: [created, edited]
 
 permissions:
   contents: write
@@ -18,7 +15,7 @@ permissions:
 jobs:
   update-reference-screenshots:
     name: Update Galata References
-    # if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, 'update galata references') }}
+    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, 'update galata references') }}
     runs-on: ubuntu-latest
 
     steps:
